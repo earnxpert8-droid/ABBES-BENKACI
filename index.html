@@ -437,7 +437,7 @@ function panelStatsV2(){
   openPanel('الإحصائيات',Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([p,n])=>`<div class="line"><span>${p}</span><b>${n} يوم</b></div><div class="bar"><span style="width:${n/tot*100}%"></span></div>`).join('')||'<p>لا توجد بيانات</p>');
 }
 function statementText(){
-  const rows=E();const lines=['كشف الحساب — '+label(S.cur),'#\tالتاريخ\tالعمل\tالمكان\tأفونس\tديسامو\tمدفوعات'];
+  const rows=E();const lines=['كشف الحساب — '+label(S.cur),'#\tالتاريخ\tالعمل\tالمكان\tأفونس\t ديپلاصمو \tمدفوعات'];
   rows.forEach((r,i)=>lines.push([i+1,r.d||'-',r.w===true?'نعم':r.w===false?'لا':'-',r.p||'-',r.af||'-',r.dp||'-',r.md||'-'].join('\t')));
   return lines.join('\n');
 }
@@ -464,7 +464,7 @@ function panelStatement(){
   </div>
   <div class="stw"><table>
     <colgroup><col style="width:6%"><col style="width:18%"><col style="width:10%"><col style="width:20%"><col style="width:12%"><col style="width:18%"><col style="width:16%"></colgroup>
-    <thead><tr><th>#</th><th>📅 الأيام</th><th>💼 العمل</th><th>📍 المكان</th><th>🪙 أفونس</th><th>🚗 ديسامو</th><th>💳 مدفوعات</th></tr></thead>
+    <thead><tr><th>#</th><th>📅 الأيام</th><th>💼 العمل</th><th>📍 المكان</th><th>🪙 أفونس</th><th>🚗ديپلاصمو و</th><th>💳 مدفوعات</th></tr></thead>
     <tbody>${trs}</tbody>
   </table></div>
   <div class="sbar">
